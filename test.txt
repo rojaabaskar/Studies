@@ -1,0 +1,134 @@
+status_code = 303
+
+if 200 <= status_code <= 299:
+    print("Success")
+elif 300 <= status_code <= 399:
+    print("Found")
+elif 400 <= status_code <= 499:
+    print("Client Error")
+else:
+    print("Server Error or Other")
+
+-------------------
+
+version = 13.99
+
+if version >= 14.0:
+    if version >= 16.0:
+        print("Latest")
+    else:
+        print("Supported but not latest")
+elif version <= 14.0:
+    print("old")
+
+
+---------
+for i in range(5):
+    print(i - 1)
+
+
+--------------
+test_cases = ["login", "signup", "logout", "signout"]
+
+for test in test_cases:
+    print("Running:", test)
+
+--------------------
+
+count = 2
+while count <= 3:
+    print(count)
+    count += 1
+
+
+-------------------
+
+for i in range(5):
+    if i == 3:
+        Break 
+    print(i)
+
+-------
+
+for i in range(5):
+    if i == 3:
+        continue
+    print(i)
+
+
+------------------------
+
+status_code= [200, 404, 500, 201, 700]
+
+for code in status_code:
+    if 200 <= code <= 299:
+      print("sucess")
+    elif 400 <= code <= 499:
+      print("client error")
+    else:
+      print("server error")
+      
+--------------
+
+
+def greet(name):
+    print("Hello",name)
+
+greet("roj")
+
+def sum(a, b,c):
+    return(a+b-c)
+
+result = sum(5,6,9)
+print(result) 
+
+------------------
+def classify_status(code):
+    if 200 <= code <=299:
+        return "success"
+    elif 400 <= code <= 499:
+        return "client error"
+    elif 500 <= code <= 599:
+        return "server error"
+    else:
+        return "unknow error"
+    
+
+codes = [200, 404, 500, 201]
+
+for c in codes:
+    print(c,"->", classify_status(c))
+
+---------------------
+
+def greet(name="guest"):
+    return "Hello " + name
+
+print (greet())
+print (greet("roj"))
+
+
+
+def connect(env = "dev"):
+    return "conneting to " + env
+
+print(connect("url"))
+
+------------------
+
+
+def test():
+    x = 10      #local variable 
+    print(x)
+
+test()
+
+
+x = 10   # global variable
+
+def test():
+    print(x)
+
+test()
+
+-------------
