@@ -5,8 +5,12 @@ def Check_urls(urls):
         print("No URLs provided")
     else: 
         n = 1 
-        for link in urls:               # loop through each URL
-            print(str(n)+".", link)
-            n= n+1
+        for link in urls:
+            if link == str(""):   # Empty strings inside the list 
+                print("Entry "+str(n)+":","Blank, URL is not provided.") 
+                n= n+1
+            else:
+                print(str(n)+".", link)   # loop through each URL
+                n= n+1
 
 Check_urls(["", "https://github.com", ""]) # calling the fucntion with a list along with few blank data
