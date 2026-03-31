@@ -1,8 +1,9 @@
 urls = ["https://google.com", "https://github.com","","https://invalid-url.com",""]
      
 def summarise_urls(urls):
+    # printing the length of the list 
     print("Total:", len(urls))
-    
+    # validiating the list
     valid = 0
     blank = 0
 
@@ -16,3 +17,4 @@ def summarise_urls(urls):
         print("Blank:", blank)
 
 summarise_urls(urls)
+

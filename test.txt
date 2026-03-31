@@ -208,3 +208,25 @@ def Check_urls(urls):
 Check_urls(["", "https://github.com", ""]) # calling the fucntion with a list along with few blank data
 
 Using enumerate() : it gives both the position number and the item  on the every loop You don't need to create n = 1 before the loop or increment it manually anywhere
+
+
+-------------------------------------------------------------------------------------------------------
+urls = ["https://google.com", "https://github.com","","https://invalid-url.com",""]
+     
+def summarise_urls(urls):
+    # printing the length of the list 
+    print("Total:", len(urls))
+    # validiating the list
+    valid = 0
+    blank = 0
+
+    for link in urls:
+        if link != "":
+            valid += 1
+        else:
+            blank += 1
+    
+        print("Valid:", valid)
+        print("Blank:", blank)
+
+summarise_urls(urls)
