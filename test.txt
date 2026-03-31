@@ -187,5 +187,24 @@ Your check_urls() function now handles:
 Empty list → clear message
 Blank entries → position-aware message
 Valid URLs → numbered and printed
+    
+--------------------------------------------------------------------------------------------------------------------------------------`
 
---------------------------------------------------------------------------------------------------------------------------------------
+urls = ["https://google.com", "https://github.com", "https://invalid-url.com"]
+     
+def Check_urls(urls):
+    if len(urls)==0:                    # condition to check the empty list 
+        print("No URLs provided")
+    else: 
+       
+        for n , link in enumerate(urls, 1):
+            if link == str(""):   # Empty strings inside the list 
+                print("Entry "+str(n)+":","Blank, URL is not provided.") 
+                
+            else:
+                print(str(n)+".", link)   # loop through each URL
+                
+
+Check_urls(["", "https://github.com", ""]) # calling the fucntion with a list along with few blank data
+
+Using enumerate() : it gives both the position number and the item  on the every loop You don't need to create n = 1 before the loop or increment it manually anywhere

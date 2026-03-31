@@ -1,13 +1,7 @@
-password = "45gsvghff"
+urls = ["https://google.com", "https://github.com", "https://invalid-url.com",""]
 
-def is_valid_length(password):
-    return len(password) >= 8
-print(is_valid_length(password))
 
-def is_vaild_characters(password):
-    
-    has_upper = any(c.isupper() for c in password)
-    has_digit = any(c.isdigit() for c in password)
-    return has_digit and has_upper
 
-print(is_vaild_characters(password))
+for n, link in enumerate(urls, 1):
+    if link == "":
+        print("Entry", n, "is blank")

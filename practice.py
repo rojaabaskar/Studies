@@ -1,13 +1,18 @@
-urls = ["https://google.com", "https://github.com", "https://invalid-url.com"]
+urls = ["https://google.com", "https://github.com","","https://invalid-url.com",""]
      
-def link(urls):
-    n = 1 
-    for link in urls:
-        
-        print(str(n)+".",urls)
-        n= n+1
+def summarise_urls(urls):
+    print("Total:", len(urls))
     
-    return(n)
+    valid = 0
+    blank = 0
 
-check_urls= link(urls)
-print(check_urls)
+    for link in urls:
+        if link != "":
+            valid += 1
+        else:
+            blank += 1
+    
+        print("Valid:", valid)
+        print("Blank:", blank)
+
+summarise_urls(urls)
